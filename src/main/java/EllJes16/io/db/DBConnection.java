@@ -29,7 +29,7 @@ public class DBConnection
             e.printStackTrace();
         }
     }
-    public Properties getProperties(String propFile)
+    private Properties getProperties(String propFile)
     {
         try
         {
