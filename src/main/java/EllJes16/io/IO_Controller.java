@@ -35,7 +35,8 @@ public class IO_Controller
         }
     }
 
-    public void deleteAllTables() {
+    public void deleteAllTables()
+    {
         try {
             System.out.println("Deleting tables...");
             db_io.deleteAllTables();
@@ -57,7 +58,8 @@ public class IO_Controller
             System.out.println("Success!\n");
 
             return value;
-        } catch (IllegalArgumentException | SQLException e)
+        }
+        catch (IllegalArgumentException | SQLException e)
         {
             e.printStackTrace();
             return -1;
