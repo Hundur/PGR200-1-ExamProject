@@ -1,6 +1,6 @@
-package EllJes16.TestSupplies;
+package Innlevering_1.TestSupplies;
 
-import EllJes16.model.*;
+import Innlevering_1.model.*;
 
 import java.util.ArrayList;
 import java.util.List;

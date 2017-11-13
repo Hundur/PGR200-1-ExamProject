@@ -1,4 +1,4 @@
-package EllJes16.io.extern_output;
+package Innlevering_1.io.extern_output;
 
 import java.util.List;
 

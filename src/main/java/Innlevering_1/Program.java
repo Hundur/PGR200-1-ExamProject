@@ -1,8 +1,8 @@
-package EllJes16;
+package Innlevering_1;
 
 // This class is only here to run a preset code that will show that everything works
 
-import EllJes16.io.IO_Controller;
+import Innlevering_1.io.IO_Controller;
 
 import java.util.List;
 
@@ -25,7 +25,7 @@ public class Program
 
         List<String> listString = db_IO.readInput("C:\\Users\\Bruker\\" +
                                                           "IdeaProjects\\Innlevering_1\\" +
-                                                          "src\\test\\java\\EllJes16\\" +
+                                                          "src\\test\\java\\Innlevering_1\\" +
                                                           "TestSupplies\\DBTestInput");
 
         // split will take a list of strings, and split everything in between ||'s, and put make them into
@@ -64,6 +64,6 @@ public class Program
         // deleteAllTables will delete all the tables, will probably only be used for quickly deleting
         // the tables for tests, or this demo.
 
-        db_IO.deleteAllTables();
+        //db_IO.deleteAllTables();
     }
 }

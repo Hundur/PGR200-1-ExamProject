@@ -1,4 +1,4 @@
-package EllJes16.model;
+package Innlevering_1.model;
 
 public class Room
 {

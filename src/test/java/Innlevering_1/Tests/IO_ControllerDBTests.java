@@ -1,7 +1,7 @@
-package EllJes16.Tests;
+package Innlevering_1.Tests;
 
-import EllJes16.io.IO_Controller;
-import EllJes16.model.Room;
+import Innlevering_1.io.IO_Controller;
+import Innlevering_1.model.Room;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -12,8 +12,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import static EllJes16.TestSupplies.IO_ControllerTest_Utils.*;
-import static EllJes16.io.db.DBConnection.conn;
+import static Innlevering_1.TestSupplies.IO_ControllerTest_Utils.*;
+import static Innlevering_1.io.db.DBConnection.conn;
 import static org.junit.Assert.*;
 
 public class IO_ControllerDBTests

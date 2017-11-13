@@ -1,4 +1,4 @@
-package EllJes16.io.extern_input;
+package Innlevering_1.io.extern_input;
 
 import java.io.*;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package EllJes16;
+package Innlevering_1;
 
 public class Client
 {

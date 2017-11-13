@@ -1,6 +1,6 @@
-package EllJes16.io.extern_input;
+package Innlevering_1.io.extern_input;
 
-import EllJes16.model.*;
+import Innlevering_1.model.*;
 
 import java.util.ArrayList;
 import java.util.List;

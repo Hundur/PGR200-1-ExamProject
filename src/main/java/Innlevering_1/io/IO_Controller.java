@@ -1,10 +1,10 @@
-package EllJes16.io;
+package Innlevering_1.io;
 
-import EllJes16.io.db.DBConnection;
-import EllJes16.io.db.DB_IO;
-import EllJes16.io.extern_input.FileHandler;
-import EllJes16.io.extern_input.TextSplitter;
-import EllJes16.io.extern_output.Printer;
+import Innlevering_1.io.db.DBConnection;
+import Innlevering_1.io.db.DB_IO;
+import Innlevering_1.io.extern_input.FileHandler;
+import Innlevering_1.io.extern_input.TextSplitter;
+import Innlevering_1.io.extern_output.Printer;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -66,7 +66,6 @@ public class IO_Controller
         }
     }
 
-    // Todo: Make both print functions into get, returning a list of strings with the correct formatting
     public List<String> getTable(String table)
     {
         try

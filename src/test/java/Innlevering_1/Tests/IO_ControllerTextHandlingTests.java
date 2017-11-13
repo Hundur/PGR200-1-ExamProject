@@ -1,15 +1,15 @@
-package EllJes16.Tests;
+package Innlevering_1.Tests;
 
-import EllJes16.io.IO_Controller;
+import Innlevering_1.io.IO_Controller;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.List;
-import EllJes16.model.*;
+import Innlevering_1.model.*;
 
 
 import static org.junit.Assert.*;
-import static EllJes16.TestSupplies.IO_ControllerTest_Utils.listNormal;
+import static Innlevering_1.TestSupplies.IO_ControllerTest_Utils.listNormal;
 
 public class IO_ControllerTextHandlingTests
 {
@@ -35,7 +35,7 @@ public class IO_ControllerTextHandlingTests
 
         listString = io_Control.readInput("C:\\Users\\Bruker\\" +
                                                   "IdeaProjects\\Innlevering_1\\" +
-                                                  "src\\test\\java\\EllJes16\\" +
+                                                  "src\\test\\java\\Innlevering_1\\" +
                                                   "TestSupplies\\DBTestInput");
 
         // ASSERT
@@ -57,7 +57,7 @@ public class IO_ControllerTextHandlingTests
 
         listString = io_Control.readInput("C:\\Users\\Bruker\\" +
                                                   "IdeaProjects\\Innlevering_1\\" +
-                                                  "src\\test\\java\\EllJes16\\" +
+                                                  "src\\test\\java\\Innlevering_1\\" +
                                                   "TestSupplies\\DBTestInput");
         listObject = io_Control.split(listString);
 
@@ -111,7 +111,7 @@ public class IO_ControllerTextHandlingTests
 
         listString = io_Control.readInput("C:\\Users\\Bruker\\" +
                                                    "IdeaProjects\\Innlevering_1\\" +
-                                                   "src\\test\\java\\EllJes16\\" +
+                                                   "src\\test\\java\\Innlevering_1\\" +
                                                    "TestSupplies\\DBTestInput");
         listObject = io_Control.split(listString);
 

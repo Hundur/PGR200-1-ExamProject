@@ -1,11 +1,11 @@
-package EllJes16.io.db;
+package Innlevering_1.io.db;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import static EllJes16.io.db.DBConnection.conn;
-import static EllJes16.io.db.Queries.sqlShowTables;
+import static Innlevering_1.io.db.DBConnection.conn;
+import static Innlevering_1.io.db.Queries.sqlShowTables;
 
 public class DBUtil
 {
@@ -38,9 +38,10 @@ public class DBUtil
         Statement stmt = conn.createStatement();
         ResultSet rs = stmt.executeQuery(sqlShowTables);
 
+
         while(rs.next())
         {
-            if(table.equals(rs.getString(1)));
+            if(table.toLowerCase().equals(rs.getString(1)))
                 return true;
         }
         return false;

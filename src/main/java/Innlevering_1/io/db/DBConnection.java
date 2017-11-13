@@ -1,4 +1,4 @@
-package EllJes16.io.db;
+package Innlevering_1.io.db;
 
 import java.io.IOException;
 import java.io.InputStream;

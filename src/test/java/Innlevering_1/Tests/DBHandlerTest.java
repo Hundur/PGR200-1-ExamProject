@@ -1,10 +1,10 @@
-package EllJes16.Tests;
+package Innlevering_1.Tests;
 
-import EllJes16.io.db.DBConnection;
+import Innlevering_1.io.db.DBConnection;
 import org.junit.Before;
 import org.junit.Test;
 
-import static EllJes16.io.db.DBConnection.conn;
+import static Innlevering_1.io.db.DBConnection.conn;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 

@@ -1,14 +1,14 @@
-package EllJes16.io.db;
+package Innlevering_1.io.db;
 
-import EllJes16.model.*;
+import Innlevering_1.model.*;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import static EllJes16.io.db.DBConnection.conn;
-import static EllJes16.io.db.DBUtil.*;
-import static EllJes16.io.db.Queries.*;
+import static Innlevering_1.io.db.DBConnection.conn;
+import static Innlevering_1.io.db.DBUtil.*;
+import static Innlevering_1.io.db.Queries.*;
 
 public class DB_IO
 {
