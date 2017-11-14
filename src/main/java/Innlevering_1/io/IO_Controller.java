@@ -97,6 +97,36 @@ public class IO_Controller
         }
     }
 
+    public String getSpecifiedTeacher(int employeeID)
+    {
+        try
+        {
+            System.out.println(String.format("Retrieving information about teacher with code: %s\n", employeeID));
+            return db_io.getSpecifiedTeacher(employeeID);
+        }
+        catch (SQLException e)
+        {
+            System.out.println(String.format("Failed: %s is not a valid employeeID\n", employeeID));
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public String getSpecifiedRoom(String roomNumber)
+    {
+        try
+        {
+            System.out.println(String.format("Retrieving information about room with code: %s\n", roomNumber));
+            return db_io.getSpecifiedRoom(roomNumber);
+        }
+        catch (SQLException e)
+        {
+            System.out.println(String.format("Failed: %s is not a valid roomnumber\n", roomNumber));
+            e.printStackTrace();
+            return null;
+        }
+    }
+
     public List<String> readInput(String txtInput)
     {
         try

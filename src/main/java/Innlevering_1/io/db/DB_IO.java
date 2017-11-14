@@ -145,4 +145,40 @@ public class DB_IO
 
         return String.join(" || ", array);
     }
+
+    public String getSpecifiedTeacher(int employeeID) throws SQLException
+    {
+        String sql = "SELECT * FROM " + TEACHER + " WHERE EMPLOYEEID = ?";
+
+        PreparedStatement pStatement = conn.prepareStatement(sql);
+        pStatement.setInt(1, employeeID);
+        ResultSet rs = pStatement.executeQuery();
+
+        rs.next();
+        int rowSize = dbUtil.getColumns(TEACHER).size();
+        String[] array = new String[rowSize];
+
+        for(int i = 1; i <= rowSize; i++)
+            array[i - 1] = rs.getString(i);
+
+        return String.join(" || ", array);
+    }
+
+    public String getSpecifiedRoom(String roomNumber) throws SQLException
+    {
+        String sql = "SELECT * FROM " + ROOM + " WHERE ROOMNUMBER = ?";
+
+        PreparedStatement pStatement = conn.prepareStatement(sql);
+        pStatement.setString(1, roomNumber);
+        ResultSet rs = pStatement.executeQuery();
+
+        rs.next();
+        int rowSize = dbUtil.getColumns(ROOM).size();
+        String[] array = new String[rowSize];
+
+        for(int i = 1; i <= rowSize; i++)
+            array[i - 1] = rs.getString(i);
+
+        return String.join(" || ", array);
+    }
 }
