@@ -214,7 +214,7 @@ public class IO_ControllerDBTests
     }
 
     @Test
-    public void getSpecifiedSubjectTest()
+    public void getSpecifiedStuffTest()
     {
         //ARRANGE
 
@@ -228,5 +228,11 @@ public class IO_ControllerDBTests
 
         assertEquals("2 || PGR1100 || Programmering || 50", io_Control.getSpecifiedSubject("PGR1100"));
         assertEquals("1 || DB1100 || Databaser || 100", io_Control.getSpecifiedSubject("DB1100"));
+
+        assertEquals("1 || yes || Jesper Dahl Ellingsen", io_Control.getSpecifiedTeacher(1));
+        assertEquals("2 || no || Sebastian Langseth Knutsen", io_Control.getSpecifiedTeacher(2));
+
+        assertEquals("F101 || Fjerdingen || 70", io_Control.getSpecifiedRoom("F101"));
+        assertEquals("V101 || Vulkan || 130", io_Control.getSpecifiedRoom("V101"));
     }
 }
