@@ -64,6 +64,6 @@ public class Program
         // deleteAllTables will delete all the tables, will probably only be used for quickly deleting
         // the tables for tests, or this demo.
 
-        //db_IO.deleteAllTables();
+        db_IO.deleteAllTables();
     }
 }
