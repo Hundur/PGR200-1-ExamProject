@@ -1,11 +1,11 @@
-package Innlevering_1.io.db;
+package Innlevering_1.utils.dbutils;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 import static Innlevering_1.io.db.DBConnection.conn;
-import static Innlevering_1.io.db.Queries.sqlShowTables;
+import static Innlevering_1.utils.dbutils.Queries.sqlShowTables;
 
 public class DBUtil
 {

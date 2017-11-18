@@ -1,4 +1,4 @@
-package Innlevering_1.io.db;
+package Innlevering_1.utils.dbutils;
 
 public class Queries
 {
