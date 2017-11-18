@@ -6,9 +6,9 @@ import Innlevering_1.io.IO_Controller;
 
 import java.util.List;
 
-public class Program
+public class ExampleProgram
 {
-    public void testMethods()
+    public static void main(String [] args)
     {
         // This will initalize the IO_Controller, that has a properties file as a parameter,
         // in the constructor will this properties file be used to initalize a DBConnection
