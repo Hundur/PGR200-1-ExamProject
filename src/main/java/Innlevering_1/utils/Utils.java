@@ -1,7 +1,10 @@
 package Innlevering_1.utils;
 
+import Innlevering_1.io.IO_Controller;
+
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.List;
 import java.util.Properties;
 
 public class Utils
@@ -20,5 +23,17 @@ public class Utils
             e.printStackTrace();
             return null;
         }
+    }
+
+    public static String getTable(String tableName)
+    {
+        IO_Controller db = new IO_Controller("db.properties");
+        List<String> table = db.getTable(tableName);
+        String ret = "";
+
+        for(String row : table)
+            ret += row + "\n";
+
+        return ret;
     }
 }

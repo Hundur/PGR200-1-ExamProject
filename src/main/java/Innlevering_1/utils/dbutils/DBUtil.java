@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static Innlevering_1.io.db.DBConnection.conn;
-import static Innlevering_1.utils.dbutils.Queries.sqlShowTables;
+import static Innlevering_1.utils.dbutils.Queries.*;
 
 public class DBUtil
 {
@@ -38,10 +38,48 @@ public class DBUtil
         Statement stmt = conn.createStatement();
         ResultSet rs = stmt.executeQuery(sqlShowTables);
 
-
         while(rs.next())
         {
             if(table.toLowerCase().equals(rs.getString(1)))
+                return true;
+        }
+        return false;
+    }
+
+    public boolean structureCheckSubject(String code) throws SQLException
+    {
+        Statement stmt = conn.createStatement();
+        ResultSet rs = stmt.executeQuery(sqlGetSubjects);
+
+        while(rs.next())
+        {
+            if(code.toLowerCase().equals(rs.getString(1).toLowerCase()))
+                return true;
+    }
+        return false;
+    }
+
+    public boolean structureCheckTeacher(int employeeId) throws SQLException
+    {
+        Statement stmt = conn.createStatement();
+        ResultSet rs = stmt.executeQuery(sqlGetTeachers);
+
+        while(rs.next())
+        {
+            if(employeeId == rs.getInt(1))
+                return true;
+        }
+        return false;
+    }
+
+    public boolean structureCheckRoom(String roomNumber) throws SQLException
+    {
+        Statement stmt = conn.createStatement();
+        ResultSet rs = stmt.executeQuery(sqlGetRooms);
+
+        while(rs.next())
+        {
+            if(roomNumber.toLowerCase().equals(rs.getString(1).toLowerCase()))
                 return true;
         }
         return false;

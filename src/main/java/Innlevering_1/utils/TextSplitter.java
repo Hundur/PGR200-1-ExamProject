@@ -1,4 +1,4 @@
-package Innlevering_1.io.extern_input;
+package Innlevering_1.utils;
 
 import Innlevering_1.model.*;
 

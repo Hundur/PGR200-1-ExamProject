@@ -3,7 +3,7 @@ package Innlevering_1.io;
 import Innlevering_1.io.db.DBConnection;
 import Innlevering_1.io.db.DB_IO;
 import Innlevering_1.io.extern_input.FileHandler;
-import Innlevering_1.io.extern_input.TextSplitter;
+import Innlevering_1.utils.TextSplitter;
 import Innlevering_1.io.extern_output.Printer;
 
 import java.io.IOException;

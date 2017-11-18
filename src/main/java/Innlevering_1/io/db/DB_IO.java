@@ -103,6 +103,7 @@ public class DB_IO
     {
         String structureCheck = table.toUpperCase();
 
+        //This structure check prevents SQL Injection
         if (dbUtil.structureCheckTable(structureCheck))
         {
             ResultSet rs;
@@ -131,55 +132,74 @@ public class DB_IO
 
     public String getSpecifiedSubject(String subjectCode) throws SQLException
     {
-        String sql = "SELECT * FROM " + SUBJECT + " WHERE CODE = ?";
+        String structureCheck = subjectCode.toLowerCase();
 
-        PreparedStatement pStatement = conn.prepareStatement(sql);
-        pStatement.setString(1, subjectCode);
-        ResultSet rs = pStatement.executeQuery();
+        if(dbUtil.structureCheckSubject(structureCheck))
+        {
+            String sql = "SELECT * FROM " + SUBJECT + " WHERE CODE = ?";
 
-        rs.next();
-        int rowSize = dbUtil.getColumns(SUBJECT).size();
-        String[] array = new String[rowSize];
+            PreparedStatement pStatement = conn.prepareStatement(sql);
+            pStatement.setString(1, subjectCode);
+            ResultSet rs = pStatement.executeQuery();
 
-        for(int i = 1; i <= rowSize; i++)
-           array[i - 1] = rs.getString(i);
+            rs.next();
+            int rowSize = dbUtil.getColumns(SUBJECT).size();
+            String[] array = new String[rowSize];
 
-        return String.join(" || ", array);
+            for (int i = 1; i <= rowSize; i++)
+                array[i - 1] = rs.getString(i);
+
+            return String.join(" || ", array);
+        }
+        else
+            return String.format("\"%s\" is not a subjectcode\n", structureCheck);
     }
 
     public String getSpecifiedTeacher(int employeeID) throws SQLException
     {
-        String sql = "SELECT * FROM " + TEACHER + " WHERE EMPLOYEEID = ?";
+        if(dbUtil.structureCheckTeacher(employeeID))
+        {
+            String sql = "SELECT * FROM " + TEACHER + " WHERE EMPLOYEEID = ?";
 
-        PreparedStatement pStatement = conn.prepareStatement(sql);
-        pStatement.setInt(1, employeeID);
-        ResultSet rs = pStatement.executeQuery();
+            PreparedStatement pStatement = conn.prepareStatement(sql);
+            pStatement.setInt(1, employeeID);
+            ResultSet rs = pStatement.executeQuery();
 
-        rs.next();
-        int rowSize = dbUtil.getColumns(TEACHER).size();
-        String[] array = new String[rowSize];
+            rs.next();
+            int rowSize = dbUtil.getColumns(TEACHER).size();
+            String[] array = new String[rowSize];
 
-        for(int i = 1; i <= rowSize; i++)
-            array[i - 1] = rs.getString(i);
+            for (int i = 1; i <= rowSize; i++)
+                array[i - 1] = rs.getString(i);
 
-        return String.join(" || ", array);
+            return String.join(" || ", array);
+        }
+        else
+            return String.format("\"%s\" is not an employeeID\n", employeeID);
     }
 
     public String getSpecifiedRoom(String roomNumber) throws SQLException
     {
-        String sql = "SELECT * FROM " + ROOM + " WHERE ROOMNUMBER = ?";
+        String structureCheck = roomNumber.toLowerCase();
 
-        PreparedStatement pStatement = conn.prepareStatement(sql);
-        pStatement.setString(1, roomNumber);
-        ResultSet rs = pStatement.executeQuery();
+        if(dbUtil.structureCheckRoom(structureCheck))
+        {
+            String sql = "SELECT * FROM " + ROOM + " WHERE ROOMNUMBER = ?";
 
-        rs.next();
-        int rowSize = dbUtil.getColumns(ROOM).size();
-        String[] array = new String[rowSize];
+            PreparedStatement pStatement = conn.prepareStatement(sql);
+            pStatement.setString(1, roomNumber);
+            ResultSet rs = pStatement.executeQuery();
 
-        for(int i = 1; i <= rowSize; i++)
-            array[i - 1] = rs.getString(i);
+            rs.next();
+            int rowSize = dbUtil.getColumns(ROOM).size();
+            String[] array = new String[rowSize];
 
-        return String.join(" || ", array);
+            for (int i = 1; i <= rowSize; i++)
+                array[i - 1] = rs.getString(i);
+
+            return String.join(" || ", array);
+        }
+        else
+            return String.format("\"%s\" is not a roomnumber\n", structureCheck);
     }
 }
