@@ -1,5 +1,7 @@
 package Innlevering_1.io.db;
 
+import Innlevering_1.utils.Utils;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.*;
@@ -14,7 +16,8 @@ public class DBConnection
         try
         {
             System.out.println("\nTrying to establish connection...");
-            Properties props = getProperties(propFile);
+            Utils utils = new Utils();
+            Properties props = utils.getProperties(propFile);
             this.conn = DriverManager.getConnection(String.format("jdbc:mysql://%s:%s/%s",
                                                     props.getProperty("host"),
                                                     props.getProperty("port"),
@@ -27,21 +30,6 @@ public class DBConnection
         {
             System.out.println("Error: ");
             e.printStackTrace();
-        }
-    }
-    private Properties getProperties(String propFile)
-    {
-        try
-        {
-            InputStream inputStream = getClass().getResourceAsStream("/" + propFile);
-            Properties props = new Properties();
-            props.load(inputStream);
-            return props;
-        }
-        catch( IOException e )
-        {
-            e.printStackTrace();
-            return null;
         }
     }
 }

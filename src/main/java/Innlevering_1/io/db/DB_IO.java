@@ -1,5 +1,6 @@
 package Innlevering_1.io.db;
 
+import Innlevering_1.utils.dbutils.DBUtil;
 import Innlevering_1.model.*;
 
 import java.sql.*;
@@ -7,8 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static Innlevering_1.io.db.DBConnection.conn;
-import static Innlevering_1.io.db.DBUtil.*;
-import static Innlevering_1.io.db.Queries.*;
+import static Innlevering_1.utils.dbutils.DBUtil.*;
+import static Innlevering_1.utils.dbutils.Queries.*;
 
 public class DB_IO
 {

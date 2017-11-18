@@ -1,10 +1,28 @@
 package Innlevering_1.model;
 
+import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.table.DatabaseTable;
+
+@DatabaseTable(tableName = "SUBJECT")
 public class Subject
 {
+    public static final String CODE_FIELD_NAME = "CODE";
+    public static final String PROGRAM_FIELD_NAME = "PROGRAM";
+    public static final String PARTICIPANTS_FIELD_NAME = "PARTICIPANTS";
+
+    @DatabaseField(generatedId = true)
+    private int id;
+
+    @DatabaseField(columnName = CODE_FIELD_NAME)
     private String code;
+
+    @DatabaseField(columnName = PROGRAM_FIELD_NAME)
     private String program;
+
+    @DatabaseField(columnName = PARTICIPANTS_FIELD_NAME)
     private int participants;
+
+    public Subject() {}
 
     public Subject(String name, String program, int participants)
     {
@@ -12,6 +30,10 @@ public class Subject
         this.program = program;
         this.participants = participants;
     }
+
+    public int getId() { return id; }
+
+    public void setId(int id) { this.id = id; }
 
     public String getName() { return code; }
 
