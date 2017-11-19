@@ -7,10 +7,20 @@ import java.io.InputStream;
 import java.sql.*;
 import java.util.Properties;
 
+/**
+ * Generates the connection between database and the program
+ *
+ * @Author Jesper Dahl Ellingsen
+ */
 public class DBConnection
 {
     public static Connection conn;
 
+    /**
+     * Creates the connection between the program and the database
+     *
+     * @param propFile Propertiesfile with information needed to create the connection
+     */
     public DBConnection(String propFile)
     {
         try

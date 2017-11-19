@@ -11,6 +11,11 @@ import static Innlevering_1.io.db.DBConnection.conn;
 import static Innlevering_1.utils.dbutils.DBUtil.*;
 import static Innlevering_1.utils.dbutils.Queries.*;
 
+/**
+ * This class handles all input and output concerning the database
+ *
+ * @Author Jesper Dahl Ellingsen
+ */
 public class DB_IO
 {
     private DBUtil dbUtil;
@@ -20,6 +25,11 @@ public class DB_IO
         dbUtil = new DBUtil();
     }
 
+    /**
+     * Adds "SUBJECT", "TEACHER" and "ROOM" tables to the database
+     *
+     * @throws SQLException
+     */
     public void createTables() throws SQLException
     {
         Statement stmt = conn.createStatement();
@@ -30,12 +40,25 @@ public class DB_IO
         stmt.execute(sqlTableRoom);
     }
 
+    /**
+     * Deletes all the tables in the database
+     *
+     * @throws SQLException
+     */
     public void deleteAllTables() throws SQLException
     {
         Statement stmt = conn.createStatement();
         stmt.execute(sqlDeleteAllTables);
     }
 
+    /**
+     * Inserts the inputs into the database
+     *
+     * @param inputs is the list of objects that is going to be inserted into the table, only objects of type Subject, Teacher and Room is allowed
+     * @return The amount of things inserted into the database
+     * @throws IllegalArgumentException
+     * @throws SQLException
+     */
     public int insertIntoTable(List<Object> inputs) throws IllegalArgumentException, SQLException
     {
         int inputAmount = 0;
@@ -99,6 +122,14 @@ public class DB_IO
         return pStatement.executeUpdate();
     }
 
+    /**
+     * This method retrieves the requested table from the database
+     *
+     * @param table The table that you want to retrieve
+     * @return A list of strings, the strings are the lines in the table
+     * @throws IllegalArgumentException
+     * @throws SQLException
+     */
     public List<String> getTable(String table) throws IllegalArgumentException, SQLException
     {
         String structureCheck = table.toUpperCase();
@@ -130,6 +161,13 @@ public class DB_IO
         }
     }
 
+    /**
+     * Retrieves a specified subject from the database
+     *
+     * @param subjectCode The code for the subject you want to retrieve
+     * @return The subject as a string
+     * @throws SQLException
+     */
     public String getSpecifiedSubject(String subjectCode) throws SQLException
     {
         String structureCheck = subjectCode.toLowerCase();
@@ -155,6 +193,13 @@ public class DB_IO
             return String.format("\"%s\" is not a subjectcode\n", structureCheck);
     }
 
+    /**
+     * Retrieves a specified teacher from the database
+     *
+     * @param employeeID The id for the teacher you want to retrieve
+     * @return The teacher as a string
+     * @throws SQLException
+     */
     public String getSpecifiedTeacher(int employeeID) throws SQLException
     {
         if(dbUtil.structureCheckTeacher(employeeID))
@@ -178,6 +223,13 @@ public class DB_IO
             return String.format("\"%s\" is not an employeeID\n", employeeID);
     }
 
+    /**
+     * Retrieves a specified room from the database
+     *
+     * @param roomNumber The roomnumber for the room you want to retrieve
+     * @return The room as a string
+     * @throws SQLException
+     */
     public String getSpecifiedRoom(String roomNumber) throws SQLException
     {
         String structureCheck = roomNumber.toLowerCase();

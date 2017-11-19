@@ -1,9 +1,12 @@
 package Innlevering_1.utils.dbutils;
 
+/**
+ * Queries used in the program
+ *
+ * @Author Jesper Dahl Ellingsen
+ */
 public class Queries
 {
-    //Todo: Make a query to make a table for "Lecture" and connect
-    //Todo: with the other tables with primary and foreign keys
     public static final String sqlTableSubject =
                               "CREATE TABLE SUBJECT " +
                               "(SUBJECTID INT(4) AUTO_INCREMENT, " +

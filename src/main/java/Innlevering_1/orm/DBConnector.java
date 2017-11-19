@@ -7,10 +7,20 @@ import com.j256.ormlite.support.ConnectionSource;
 import java.sql.SQLException;
 import java.util.Properties;
 
+/**
+ * Class for getting a connection between database and the program using ORMLite
+ *
+ * @Author Jesper Dahl Ellingsen
+ */
 public class DBConnector
 {
     ConnectionSource connSource;
 
+    /**
+     * Makes a connection between the program and the database
+     *
+     * @param propfile The file with the information needed to create the connection
+     */
     public DBConnector(String propfile)
     {
         try

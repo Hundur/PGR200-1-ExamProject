@@ -3,6 +3,11 @@ package Innlevering_1.model;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
+/**
+ * Class for object Subject
+ *
+ * @Author Jesper Dahl Ellingsen
+ */
 @DatabaseTable(tableName = "SUBJECT")
 public class Subject
 {
@@ -24,6 +29,13 @@ public class Subject
 
     public Subject() {}
 
+    /**
+     * Created an object of type Subject
+     *
+     * @param name The name of the subject
+     * @param program The program the subject is a part of
+     * @param participants The amount of participants
+     */
     public Subject(String name, String program, int participants)
     {
         this.code = name;

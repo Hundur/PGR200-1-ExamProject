@@ -1,15 +1,23 @@
 package Innlevering_1;
 
 import Innlevering_1.io.IO_Controller;
-import Innlevering_1.io.db.DB_IO;
 import Innlevering_1.io.extern_input.TerminalInput;
 import Innlevering_1.utils.MessageAnalyzer;
 
 import java.sql.SQLException;
 import java.util.List;
 
+/**
+ * Client for this program
+ *
+ * @Author Jesper Dahl Ellingsen
+ */
 public class Client
 {
+    /**
+     * Main method for this program
+     * @param args
+     */
     public static void main(String [] args)
     {
         try

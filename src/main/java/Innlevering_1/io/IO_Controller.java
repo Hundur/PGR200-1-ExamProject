@@ -10,11 +10,23 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
+/**
+ * This class is the controller for all input and output, it works as a wrapper class.
+ *
+ * For information about the methods look at the methods respected classes.
+ *
+ * @Author Jesper Dahl Ellingsen
+ */
 public class IO_Controller
 {
     private DB_IO db_io;
     private FileHandler fh;
 
+    /**
+     * Constructs the controller and sends the properties into the class that generates the connection to the database.
+     *
+     * @param propFile is the propertiesfile where the information about the database lies.
+     */
     public IO_Controller(String propFile)
     {
         new DBConnection(propFile);

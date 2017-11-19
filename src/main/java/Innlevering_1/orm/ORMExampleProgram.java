@@ -5,6 +5,11 @@ import com.j256.ormlite.logger.LocalLog;
 
 import java.sql.SQLException;
 
+/**
+ * Exampleprogram that showcases use of ORMLite
+ *
+ * @Author Jesper Dahl Ellingsen
+ */
 public class ORMExampleProgram
 {
     public static void main(String [] args)

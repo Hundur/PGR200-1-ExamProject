@@ -4,10 +4,22 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Class to handle files
+ *
+ * @Author Jesper Dahl Ellingsen
+ */
 public class FileHandler
 {
     public BufferedReader br;
 
+    /**
+     * Reads the txtfile
+     *
+     * @param txtFile The file that is read
+     * @return The list of lines in the txtfile
+     * @throws IOException
+     */
     public List<String> readInput(String txtFile) throws IOException
     {
         br = new BufferedReader(new FileReader(txtFile));

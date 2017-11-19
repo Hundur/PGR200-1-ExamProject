@@ -5,8 +5,19 @@ import Innlevering_1.model.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Splits the text
+ *
+ * @Author Jesper Dahl Ellingsen
+ */
 public class TextSplitter
 {
+    /**
+     * Splits the text and creates objects from the information in the text
+     *
+     * @param listString A list of lines to split
+     * @return A list of objects of type Subject, Teacher and Rooms
+     */
     public List<Object> split(List<String> listString)
     {
         List<Object> objectList = new ArrayList<>();

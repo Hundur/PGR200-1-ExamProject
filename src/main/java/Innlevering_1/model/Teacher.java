@@ -1,11 +1,22 @@
 package Innlevering_1.model;
 
+/**
+ * Class for object Teacher
+ *
+ * @Author Jesper Dahl Ellingsen
+ */
 public class Teacher
 {
     private int employeeID;
     private String available;
     private String fullName;
 
+    /**
+     * Creates an object of type Teacher
+     *
+     * @param fullName The full name of the teacher
+     * @param available If the teacher is available or not
+     */
     public Teacher(String fullName, String available)
     {
         this.fullName = fullName;

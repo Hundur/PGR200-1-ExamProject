@@ -7,11 +7,23 @@ import java.sql.SQLException;
 
 import static Innlevering_1.utils.Utils.getTable;
 
+/**
+ * Analyses user input
+ *
+ * @Author Jesper Dahl Ellingsen
+ */
 public class MessageAnalyzer
 {
     private final String errorSearchword = "Error: Missing searchword\n" +
             "If you need help, type \"help\"\n";
 
+    /**
+     * Analyzes the user input and figures out what the user requests
+     *
+     * @param message The user input
+     * @return The answer to the request
+     * @throws SQLException
+     */
     public String analyzeMessage(String message) throws SQLException
     {
         String finalMsg;

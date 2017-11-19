@@ -6,6 +6,11 @@ import Innlevering_1.io.IO_Controller;
 
 import java.util.List;
 
+/**
+ * Exampleprogram for this project
+ *
+ * @Author Jesper Dahl Ellingsen
+ */
 public class ExampleProgram
 {
     public static void main(String [] args)

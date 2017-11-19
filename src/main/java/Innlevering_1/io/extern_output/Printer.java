@@ -5,6 +5,11 @@ import java.util.List;
 // Testing this class is reduntant, you are not supposed to test methods from
 // classes that aren't yours
 
+/**
+ * Class for printing tables to the terminal
+ *
+ * @Author Jesper Dahl Ellingsen
+ */
 public class Printer
 {
     public static void print(String msg)
