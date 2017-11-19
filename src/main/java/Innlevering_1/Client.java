@@ -28,9 +28,7 @@ public class Client
             String input;
 
             db_IO.createTables();
-            List<String> listString = db_IO.readInput("C:\\Users\\Bruker\\" +
-                                                               "IdeaProjects\\Innlevering_1\\" +
-                                                               "src\\test\\java\\Innlevering_1\\" +
+            List<String> listString = db_IO.readInput("src\\test\\java\\Innlevering_1\\" +
                                                                "TestSupplies\\DBTestInput");
 
             List<Object> listObjects = db_IO.split(listString);
