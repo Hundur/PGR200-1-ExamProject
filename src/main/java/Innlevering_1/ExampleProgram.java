@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Exampleprogram for this project
  *
- * @Author Jesper Dahl Ellingsen
+ * @author Jesper Dahl Ellingsen
  */
 public class ExampleProgram
 {
@@ -28,9 +28,7 @@ public class ExampleProgram
 
         // readInput will read the txt file requested in the parameter, and read each line into a list.
 
-        List<String> listString = db_IO.readInput("C:\\Users\\Bruker\\" +
-                                                          "IdeaProjects\\Innlevering_1\\" +
-                                                          "src\\test\\java\\Innlevering_1\\" +
+        List<String> listString = db_IO.readInput("src\\test\\java\\Innlevering_1\\" +
                                                           "TestSupplies\\DBTestInput");
 
         // split will take a list of strings, and split everything in between ||'s, and put make them into

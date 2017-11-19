@@ -10,7 +10,7 @@ import java.util.Properties;
 /**
  * Generates the connection between database and the program
  *
- * @Author Jesper Dahl Ellingsen
+ * @author Jesper Dahl Ellingsen
  */
 public class DBConnection
 {

@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * Splits the text
  *
- * @Author Jesper Dahl Ellingsen
+ * @author Jesper Dahl Ellingsen
  */
 public class TextSplitter
 {

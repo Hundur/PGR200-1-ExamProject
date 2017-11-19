@@ -3,7 +3,7 @@ package Innlevering_1.model;
 /**
  * Class for object room
  *
- * @Author Jesper Dahl Ellingsen
+ * @author Jesper Dahl Ellingsen
  */
 public class Room
 {

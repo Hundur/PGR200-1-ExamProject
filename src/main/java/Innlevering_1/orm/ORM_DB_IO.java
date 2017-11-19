@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * The IO methods using ORMLite
  *
- * @Author Jesper Dahl Ellingsen
+ * @author Jesper Dahl Ellingsen
  */
 public class ORM_DB_IO
 {

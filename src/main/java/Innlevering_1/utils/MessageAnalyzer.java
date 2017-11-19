@@ -10,7 +10,7 @@ import static Innlevering_1.utils.Utils.getTable;
 /**
  * Analyses user input
  *
- * @Author Jesper Dahl Ellingsen
+ * @author Jesper Dahl Ellingsen
  */
 public class MessageAnalyzer
 {

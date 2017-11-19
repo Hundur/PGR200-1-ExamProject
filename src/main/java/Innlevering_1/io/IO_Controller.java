@@ -15,7 +15,7 @@ import java.util.List;
  *
  * For information about the methods look at the methods respected classes.
  *
- * @Author Jesper Dahl Ellingsen
+ * @author Jesper Dahl Ellingsen
  */
 public class IO_Controller
 {

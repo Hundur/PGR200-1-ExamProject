@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * Class for printing tables to the terminal
  *
- * @Author Jesper Dahl Ellingsen
+ * @author Jesper Dahl Ellingsen
  */
 public class Printer
 {

@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Client for this program
  *
- * @Author Jesper Dahl Ellingsen
+ * @author Jesper Dahl Ellingsen
  */
 public class Client
 {

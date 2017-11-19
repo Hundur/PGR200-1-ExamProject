@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * Class to handle files
  *
- * @Author Jesper Dahl Ellingsen
+ * @author Jesper Dahl Ellingsen
  */
 public class FileHandler
 {

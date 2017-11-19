@@ -10,7 +10,7 @@ import java.util.Properties;
 /**
  * Utils for misc use
  *
- * @Author Jesper Dahl Ellingsen
+ * @author Jesper Dahl Ellingsen
  */
 public class Utils
 {

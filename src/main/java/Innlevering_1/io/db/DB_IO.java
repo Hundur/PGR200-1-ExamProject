@@ -14,7 +14,7 @@ import static Innlevering_1.utils.dbutils.Queries.*;
 /**
  * This class handles all input and output concerning the database
  *
- * @Author Jesper Dahl Ellingsen
+ * @author Jesper Dahl Ellingsen
  */
 public class DB_IO
 {

@@ -10,7 +10,7 @@ import java.util.Properties;
 /**
  * Class for getting a connection between database and the program using ORMLite
  *
- * @Author Jesper Dahl Ellingsen
+ * @author Jesper Dahl Ellingsen
  */
 public class DBConnector
 {

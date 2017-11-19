@@ -10,7 +10,7 @@ import static Innlevering_1.utils.dbutils.Queries.*;
 /**
  * Class for utilities used in database methods
  *
- * @Author Jesper Dahl Ellingsen
+ * @author Jesper Dahl Ellingsen
  */
 public class DBUtil
 {

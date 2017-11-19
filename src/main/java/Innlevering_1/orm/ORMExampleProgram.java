@@ -8,7 +8,7 @@ import java.sql.SQLException;
 /**
  * Exampleprogram that showcases use of ORMLite
  *
- * @Author Jesper Dahl Ellingsen
+ * @author Jesper Dahl Ellingsen
  */
 public class ORMExampleProgram
 {
